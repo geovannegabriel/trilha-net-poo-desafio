@@ -1,22 +1,148 @@
-# DIO - Trilha .NET - Programação orientada a objetos
-www.dio.me
 
-## Desafio de projeto
-Para este desafio, você precisará usar seus conhecimentos adquiridos no módulo de orientação a objetos, da trilha .NET da DIO.
 
-## Contexto
-Você é responsável por modelar um sistema que trabalha com celulares. Para isso, foi solicitado que você faça uma abstração de um celular e disponibilize maneiras de diferentes marcas e modelos terem seu próprio comportamento, possibilitando um maior reuso de código e usando a orientação a objetos.
+---
 
-## Proposta
-Você precisa criar um sistema em .NET, do tipo console, mapeando uma classe abstrata e classes específicas para dois tipos de celulares: Nokia e iPhone. 
-Você deve criar as suas classes de acordo com o diagrama abaixo:
+## 📱 Desafio de Abstração com POO - Trilha .NET
 
-![Diagrama classes](Imagens/diagrama.png)
+Este projeto faz parte do desafio da **trilha .NET da Digital Innovation One (DIO)**. O objetivo foi aplicar os conceitos de **Programação Orientada a Objetos (POO)** na prática, através da abstração de um sistema que simula celulares de diferentes marcas.
 
-## Regras e validações
-1. A classe **Smartphone** deve ser abstrata, não permitindo instanciar e servindo apenas como modelo.
-2. A classe **Nokia** e **Iphone** devem ser classes filhas de Smartphone.
-3. O método **InstalarAplicativo** deve ser sobrescrito na classe Nokia e iPhone, pois ambos possuem diferentes maneiras de instalar um aplicativo.
+---
 
-## Solução
-O código está pela metade, e você deverá dar continuidade obedecendo as regras descritas acima, para que no final, tenhamos um programa funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.
+## 🛠️ Tecnologias Utilizadas
+
+* C# (.NET)
+* Programação Orientada a Objetos (POO)
+* .NET SDK 6.0 ou superior
+* Visual Studio Code / Visual Studio / Rider (IDE)
+* Git e GitHub
+
+---
+
+## 🚀 Descrição do Desafio
+
+O desafio consistiu em criar uma classe abstrata chamada `Smartphone`, que possui as seguintes propriedades:
+
+* `Numero` (pública)
+* `Modelo` (protegida)
+* `Imei` (protegida)
+* `Memoria` (protegida)
+
+Além dos métodos:
+
+* `Ligar()`
+* `ReceberLigacao()`
+* `InstalarAplicativo(string nome)` (abstrato — deve ser sobrescrito pelas classes filhas)
+
+### 🏗️ Classes que herdam de `Smartphone`:
+
+* **Nokia**
+* **iPhone**
+
+Cada uma dessas classes implementa o método abstrato `InstalarAplicativo` de forma personalizada, simulando a instalação de aplicativos em dispositivos diferentes.
+
+---
+
+## 📑 Diagrama de Classes
+
+```plaintext
+           Smartphone (abstract)
+        ┌───────────────────────────────┐
+        │ + Numero: string               │
+        │ - Modelo: string                │
+        │ - IMEI: string                  │
+        │ - Memoria: int                  │
+        │ + Ligar()                       │
+        │ + ReceberLigacao()              │
+        │ + InstalarAplicativo(nome) (abs)│
+        └────────────┬────────────────────┘
+                     │
+         ┌───────────┴───────────┐
+         │                       │
+      Nokia                   Iphone
+      (override               (override
+       InstalarAplicativo)     InstalarAplicativo)
+```
+
+---
+
+## 🎯 Funcionalidades
+
+* Ligar o celular
+* Receber ligação
+* Instalar aplicativos
+* Diferenciar comportamento por marca (`Nokia` e `Iphone`)
+
+---
+
+## ▶️ Como Executar o Projeto
+
+1. Clone este repositório:
+
+```bash
+git clone https://github.com/seu-usuario/trilha-net-poo-desafio.git
+```
+
+2. Navegue até a pasta do projeto:
+
+```bash
+cd trilha-net-poo-desafio
+```
+
+3. Compile o projeto:
+
+```bash
+dotnet build
+```
+
+4. Execute o projeto:
+
+```bash
+dotnet run
+```
+
+---
+
+## 💡 Aprendizados
+
+✔️ Abstração
+✔️ Herança
+✔️ Encapsulamento
+✔️ Polimorfismo
+✔️ Estrutura de Classes no .NET
+✔️ Boas práticas de desenvolvimento orientado a objetos
+
+---
+
+## 🤝 Contribuição
+
+Sinta-se livre para abrir issues ou enviar pull requests com melhorias e sugestões!
+
+---
+
+## 🔗 Links Úteis
+
+* [DIO - Digital Innovation One](https://www.dio.me/)
+* [.NET Documentation](https://learn.microsoft.com/pt-br/dotnet/)
+* [GitHub Docs](https://docs.github.com/)
+
+---
+
+## 🧑‍💻 Autor
+
+**Gabriel Geovanne**
+
+---
+
+## 🏆 Licença
+
+Este projeto é livre para uso e aprendizado. 🚀
+
+---
+
+## 🚀 Resultado
+
+✅ Projeto funcionando com sucesso!
+
+---
+
+
